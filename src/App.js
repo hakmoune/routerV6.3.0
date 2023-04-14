@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./components/Home";
 import { Contact } from "./components/Contact";
 import { About } from "./components/About";
+import { OrderSummary } from "./components/OrderSummary";
 import { ErrorPage } from "./components/ErrorPage";
 import { Menu } from "./UI/Menu";
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/order-summary" element={<OrderSummary />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
