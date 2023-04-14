@@ -9,46 +9,12 @@ import { Menu } from "./UI/Menu";
 function App() {
   return (
     <Router>
+      <Menu />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <React.Fragment>
-              <Menu />
-              <Home />
-            </React.Fragment>
-          }
-        />
-
-        <Route
-          path="/contact"
-          element={
-            <React.Fragment>
-              <Menu />
-              <Contact />
-            </React.Fragment>
-          }
-        />
-
-        <Route
-          path="/about"
-          element={
-            <React.Fragment>
-              <Menu />
-              <About />
-            </React.Fragment>
-          }
-        />
-
-        <Route
-          path="*"
-          element={
-            <React.Fragment>
-              <Menu />
-              <ErrorPage />
-            </React.Fragment>
-          }
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
   );
