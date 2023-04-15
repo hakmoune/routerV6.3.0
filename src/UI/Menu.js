@@ -38,6 +38,11 @@ export function Menu() {
                 About
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to="/products" className="nav-link">
+                Products
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

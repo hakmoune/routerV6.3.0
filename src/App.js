@@ -4,6 +4,9 @@ import { Home } from "./components/Home";
 import { Contact } from "./components/Contact";
 import { About } from "./components/About";
 import { OrderSummary } from "./components/OrderSummary";
+import { Products } from "./components/Products";
+import { Features } from "./components/Features";
+import { New } from "./components/New";
 import { ErrorPage } from "./components/ErrorPage";
 import { Menu } from "./UI/Menu";
 
@@ -16,6 +19,13 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/order-summary" element={<OrderSummary />} />
+
+        <Route path="/products" element={<Products />}>
+          <Route index element={<Features />} />
+          <Route path="features" element={<Features />} />
+          <Route path="new" element={<New />} />
+        </Route>
+
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>

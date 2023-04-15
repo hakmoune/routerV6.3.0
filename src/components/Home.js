@@ -9,7 +9,7 @@ export function Home() {
       <div>
         <p>Iphone 14 Pro Max</p>
         <button
-          onClick={() => navigate("/order-summary")}
+          onClick={() => navigate("order-summary")}
           className="btn btn-success"
         >
           Place Order
