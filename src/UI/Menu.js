@@ -43,6 +43,11 @@ export function Menu() {
                 Products
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to="/users" className="nav-link">
+                Users
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

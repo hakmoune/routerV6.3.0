@@ -7,6 +7,9 @@ import { OrderSummary } from "./components/OrderSummary";
 import { Products } from "./components/Products";
 import { Features } from "./components/Features";
 import { New } from "./components/New";
+import { Users } from "./components/Users";
+import { User } from "./components/User";
+import { Admin } from "./components/Admin";
 import { ErrorPage } from "./components/ErrorPage";
 import { Menu } from "./UI/Menu";
 
@@ -24,6 +27,11 @@ function App() {
           <Route index element={<Features />} />
           <Route path="features" element={<Features />} />
           <Route path="new" element={<New />} />
+        </Route>
+
+        <Route path="/users" element={<Users />}>
+          <Route path=":id" element={<User />} />
+          <Route path="admin" element={<Admin />} />
         </Route>
 
         <Route path="*" element={<ErrorPage />} />
