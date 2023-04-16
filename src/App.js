@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./components/Home";
 import { Contact } from "./components/Contact";
-import { About } from "./components/About";
 import { OrderSummary } from "./components/OrderSummary";
 import { Products } from "./components/Products";
 import { Features } from "./components/Features";
@@ -12,6 +11,7 @@ import { User } from "./components/User";
 import { Admin } from "./components/Admin";
 import { ErrorPage } from "./components/ErrorPage";
 import { Menu } from "./UI/Menu";
+const LazyLoading = React.lazy(() => import("./components/About"));
 
 function App() {
   return (
@@ -20,7 +20,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
+
+        <Route
+          path="/about"
+          element={
+            <React.Suspense fallback="Loading...">
+              <LazyLoading />
+            </React.Suspense>
+          }
+        />
+
         <Route path="/order-summary" element={<OrderSummary />} />
 
         <Route path="/products" element={<Products />}>
