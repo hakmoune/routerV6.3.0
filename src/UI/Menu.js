@@ -48,6 +48,11 @@ export function Menu() {
                 Users
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to="/profile" className="nav-link">
+                Profile
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
